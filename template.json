@@ -1,0 +1,34 @@
+  
+  "display_name": {
+	"_begin": "Begin://display_name Block",
+    "name": "DisplayName",
+	"disambiguatingDescription": "DisplayQuickDesc",
+    "description": "DisplayDesc",
+	"description02_name": "Display2Name",
+	"description02": [
+		"Display2info"
+	],
+    "Difficulty": "DisplayName",
+	"datePosted": "yyyy-mm-dd",
+	"thumbnail": "450x300",
+	"image": "700x600",
+	"author": [
+		{
+			"name": "DisplayName",
+			"email": "DisplayName@mail.",
+			"sameAs": "https://www.DisplayName.com/"
+		}
+	],
+	"files": [
+		{
+			"name": "DisplayName.ova",
+			"description": "DisplayName",
+			"contentSize": "",
+			"contentUrl": "",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "key1, key2",
+	"_end": "End://display_name Block"
+  }
