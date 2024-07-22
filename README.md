@@ -7,8 +7,10 @@ This repository contains a JSON file for displaying Virtual Machines (VMs) on th
 To contribute a new VM to our list, follow these steps:
 
 1. Fork this repository.
-2. Add your VM details to the JSON file.
-3. Submit a pull request with a detailed description of your VM.
+2. Use the template.json file from repository. This file provides a sample structure that you should follow when adding your VM details.
+3. Add your VM details to the JSON file.
+4. Ensure your JSON file is correctly formatted. 
+5. Submit a pull request with a detailed description of your VM.
 
 ## Contact Us
 For any questions or suggestions, please reach out to us at vmbox@vmbox.online.
