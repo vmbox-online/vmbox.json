@@ -1,0 +1,518 @@
+{
+  "linux-ctf": {
+	"_begin": "Begin://Linux CTF Block",
+    "name": "Linux CTF",
+    "disambiguatingDescription": "Linux CTF (Capture the Flag) competition, featuring 16 challenging questions designed to test and enhance Linux skills. Compete, learn, and conquer the flags!",
+    "description": "Linux CTF (Capture the Flag) competition, featuring 16 challenging questions designed to test and enhance Linux skills.",
+	"description02_name": "Questions",
+	"description02": [
+		"<strong><u>Exam 0:</u></strong> The purpose of this level is to access the server using SSH. The host you need to connect to is the <strong>Attack</strong> server provided to you, you need to SSH into it on port 2221. Username is exam0 and password is exam0. Answering a question will activate the question for the next level.<br/><strong>Question:</strong> What is the password for user exam0?",
+		"<br/><br/><strong><u>Exam 1:</u></strong> The password for the next level is stored in a file named \"<strong>readme</strong>\" located in the home directory. Use this password to log into the \"exam1\" account via SSH. Whenever you find a password for a level, use SSH (on port 2221) to log into that level and continue the exam.",
+		"<br/><br/><strong><u>Exam 2:</u></strong> To move to the next stage, the password of the exam2 user is in the file named <strong>-</strong> on the server.",
+		"<br/><br/><strong><u>Exam 3:</u></strong> To proceed to the next step, the password of the exam3 user is in the file called <strong>spaces in this filename</strong> on the server.",
+		"<br/><br/><strong><u>Exam 4:</u></strong> To proceed to the next step, the password of the exam4 user is in a <strong>hidden</strong> file in the <strong>inhere</strong> folder on the server.",
+		"<br/><br/><strong><u>Exam 5:</u></strong> To proceed to the next step, the password of the exam5 user is in the <strong>human-readable</strong> file in the <strong>inhere</strong> folder on the server.",
+		"<br/><br/><strong><u>Exam 6:</u></strong> To proceed to the next stage, the password of the exam6 user is in the file that meets these conditions in the <strong>inhere</strong> folder.<br/><strong>human-readable<br/>1033 bytes in size<br/>not executable</strong>",
+		"<br/><br/><strong><u>Exam 7:</u></strong> To move to the next stage, the password of the exam7 user is <strong>somewhere on the server</strong> in a file that satisfies these conditions.<br/><strong>owned by user exam7<br/>owned by group exam6<br/>Size 41 bytes</strong>",
+		"<br/><br/><strong><u>Exam 8:</u></strong> To proceed to the next step, the password of the exam8 user is in front of the word <strong>millionths</strong> in the <strong>data.txt</strong> file.",
+		"<br/><br/><strong><u>Exam 9:</u></strong> The password of the exam9 user to proceed to the next step is a text string used only once in the <strong>data.txt</strong> file.",
+		"<br/><br/><strong><u>Exam 10:</u></strong> The password of the exam10 user to proceed to the next step is in the <strong>data.txt</strong> file. In the <strong>human-readable</strong> sting of the file, you will find the password in the line with several <strong>=</strong> signs in front of it",
+		"<br/><br/><strong><u>Exam 11:</u></strong> To proceed to the next step, the password of the exam11 user is in <strong>base64</strong> format in the <strong>data.txt</strong> file.",
+		"<br/><br/><strong><u>Exam 12:</u></strong> Home directory contains files <strong>passwords.old</strong> and <strong>passwords.new</strong>. The data in these two files is identical, only the data in one line has changed. The password of exam12 for the next stage is in the modified line in the <strong>passwords.new</strong> file.<br/><br/><strong>NOTE:</strong> if you have solved this level and see <strong>“Byebye!”</strong> when trying to log into exam12, this is related to the next level, exam13<br/><br/><em>Don't forget to record the passwords somewhere.</em>",
+		"<br/><br/><strong><u>Exam 13:</u></strong> The password of the exam13 user for the next stage is in the <strong>readme</strong> file in the home directory. There's just one problem, someone has changed the <strong>.bashrc</strong> file when logging in via SSH.",
+		"<br/><br/><strong><u>Exam 14:</u></strong> The password of the exam14 user for the next step is in the <strong>data.txt</strong> file in the home directory. Here, all lowercase (a-z) and uppercase (A-Z) letters are rotated by 13 positions.",
+		"<br/><br/><strong><u>Exam 15:</u></strong> The password of the exam15 user for the next stage is stored in the <strong>data.txt</strong> file, which is an archived hexdump many times.",
+		"<br/><br/><strong><u>Exam 16:</u></strong> The password of the exam16 user for the next stage is stored in the <strong>/etc/exam_pass/exam16</strong> file and can only be read by the <strong>exam16</strong> user. Now you have got the password for exam15, but the next step is to connect to <strong>localhost 2221</strong> with the <strong>private SSH</strong> key in the current directory to go in and read the password from the /etc/exam_pass/exam16 file.",
+		
+		"<br><br><hr/><h2>Question Points</h2>",
+		"<strong>Exam0:</strong> 200 points<br/><strong>Exam1:</strong> 40 points<br/><strong>Exam2:</strong> 40 points<br/><strong>Exam3:</strong> 40 points<br/><strong>Exam4:</strong> 20 points<br/><strong>Exam5:</strong> 4 points<br/><strong>Exam6:</strong> 40 points<br/><strong>Exam7:</strong> 40 points<br/><strong>Exam8:</strong> 40 points<br/><strong>Exam9:</strong> 20 points<br/><strong>Exam10:</strong> 20 points<br/><strong>Exam11:</strong> 40 points<br/><strong>Exam12:</strong> 60 points<br/><strong>Exam13:</strong> 8 points<br/><strong>Exam14:</strong> 100 points<br/><strong>Exam15:</strong> 120 points<br/><strong>Exam16:</strong> 60 points",
+		
+		"<br><br><hr/><h2>Configuration</h2>",
+		"Open VirtualBox and in the VirtualBox Manager, navigate to the <strong>File</strong> menu at the top left corner and select <strong>Import Appliance....</strong> In the Appliance to Import window, click the folder icon to choose a virtual appliance file to import. Browse to the location of your .ova file, select it, and click <strong>Open</strong>.",
+		"<br/><br/>Review the Appliance Settings window that appears. Here, you can review and change the settings if necessary, such as the name of the virtual machine, CPU count, and memory allocation. Once you are satisfied with the settings, click <strong>Next</strong> and then <strong>Import</strong> to begin the import process. VirtualBox will start importing the .ova file, and this process may take a few minutes depending on the size of the .ova file and your system's performance. Once the import is complete, your virtual machine will be ready to use.",
+		
+		"<br><br><hr/><h2>Information</h2>",
+		"<strong>Network</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address Assignment:</strong> Automatically assigned (visible upon server startup)",
+		"<br/><br/><strong>Access (for configuration)</strong>",
+		"<br/><strong>Attack server (Linux CTF - Attack):</strong> <br/>SSH port: 2221 <br/>user: finalexam <br/>pass: Fnl3489xfk <br/>sudo su (same password)",
+		"<br/><br/><strong>Questions server (Linux CTF - Questions):</strong> <br/>CTF Panel (Admin access):<br>login: finexam <br/>pass: Adm1n@pd2dw3",
+		"<br/><br/>Change passwords after logging into the server",
+
+		"<br><br><hr/><h2>Flags</h2>",
+		"<strong>Question 0;</strong> user: exam0; flag: exam0<br/><strong>Question 1;</strong> user: exam1; flag: 27563978c4ecbad5d966ae5fc410a89e9c336db1<br/><strong>Question 2;</strong> user: exam2; flag: e6469b1f067abcaca3cbd313e094105332f377ad<br/><strong>Question 3;</strong> user: exam3; flag: 9786bbc519e76544bdda0a0e2f90bb256fbb2a0b<br/><strong>Question 4;</strong> user: exam4; flag: 77ce9a459e1d97044479c042625c74398cf3978c<br/><strong>Question 5;</strong> user: exam5; flag: b30af36d00bf3584df2eac87e91c309bfaf6220b<br/><strong>Question 6;</strong> user: exam6; flag: e5bd961943bcaf6365a87ba5c27338384efef35a<br/><strong>Question 7;</strong> user: exam7; flag: 5df6ce2d0c4c984bcabefcee3239a2a3a034aa70<br/><strong>Question 8;</strong> user: exam8; flag: 334a821c09bd76249a5e28b7afad1d670aa6f107<br/><strong>Question 9;</strong> user: exam9; flag: 6fadfa73f27c1fa9bad0bbde413fcf2d192ce079<br/><strong>Question 10;</strong> user: exam10; flag: baa199734364a4e0181a4ef8e28d7fa47ddcafd2<br/><strong>Question 11;</strong> user: exam11; flag: a53afc28f10283ee0d6e49e0fca82439ac99338c<br/><strong>Question 12;</strong> user: exam12; flag: e17e0ab14a905a8b6417dabd057bbf22170d5438<br/><strong>Question 13;</strong> user: exam13; flag: ce43d3f825521133020cf633930468670c2118cf<br/><strong>Question 14;</strong> user: exam14; flag: ff916c7d7af5dd23b31a2cb9f55613327c84c83c<br/><strong>Question 15;</strong> user: exam15; flag: bd3135cad784fe5eaedabb8e9792dd9f219d0872<br/><strong>Question 16;</strong> user: exam16; flag: 673ede67a530693d35fedc8e4ab36e494b7b607f",
+
+		"<br><br><hr/><h2>Resolving Duplicate IPs After Importing Multiple VMs</h2>",
+		"If you notice that all your imported VMs are showing the same IP address, this is likely due to the VMs having the same machine ID. Follow these steps to resolve the issue by changing the machine ID on each VM:",
+		"<br/><strong>Open a Terminal on the VM:</strong><br/>Begin by accessing the terminal of the VM where you need to change the machine ID.",
+		"<br/><br/><strong>Check the Current Machine ID:</strong><br/>Run the following command to view the current machine ID:<br/><em>cat /etc/machine-id</em>",
+		"<br/><strong>Remove the Existing Machine ID:</strong><br/>Execute the command below to remove the existing machine ID file:<br/><em>sudo rm -f /etc/machine-id</em>",
+		"<br/><strong>Generate a New Machine ID:</strong><br/>Create a new machine ID using the following command:<br/><em>sudo dbus-uuidgen --ensure=/etc/machine-id</em>",
+		"<br/><strong>Remove the D-Bus Machine ID File:</strong><br/>Remove the D-Bus machine ID file by running:<br/><em>sudo rm /var/lib/dbus/machine-id</em>",
+		"<br/><strong>Generate a New D-Bus Machine ID:</strong><br/>Ensure the creation of a new D-Bus machine ID with the command:<br/><em>sudo dbus-uuidgen --ensure</em>",
+		"<br/><strong>Reboot the VM:</strong><br/>Finally, reboot the VM to apply the changes:<br/><em>reboot</em>",
+		"<br/><br/>After following these steps, your VM should now have a unique machine ID, which will prevent it from having the same IP address as other VMs."
+		
+	],
+    "Difficulty": "Medium",
+	"datePosted": "2024-08-01",
+	"thumbnail": "linux-ctf-450x300.png",
+	"image": "linux-ctf-700x600.png",
+	"author": [
+		{
+			"name": "Rashad Aliyev",
+			"email": "rashad@aliev.info",
+			"sameAs": "https://aliev.info/"
+		}
+	],
+	"files": [
+		{
+			"name": "Linux CTF - Attack.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "3578806272",
+			"contentUrl": "Linux CTF - Attack.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		},
+		{
+			"name": "Linux CTF - Attack Password changer",
+			"description": "This script should change passwords but only use passwords that are exactly 40 symbols long. Default passwords should not be changed; only imported VM passwords should be altered.<br/>Run the script exclusively on the imported \"Linux CTF - Attack\" Virtual Machine (VM).<br/>Run Script:<br/>chmod +x linuxctf.sh<br/>sudo ./linuxctf.sh",
+			"contentSize": "5907",
+			"contentUrl": "linuxctf.sh",
+			"encodingFormat": "application/x-sh",
+			"sha256": ""		
+		},
+		{
+			"name": "Linux CTF - Questions.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "6623729152",
+			"contentUrl": "Linux CTF - Questions.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		},
+		{
+			"name": "Linux CTF - Questions.zip",
+			"description": "To prepare the tasks, first, extract the file. Next, modify the CTF flags within the flags.json file according to your requirements. After making the necessary changes, archive all again as .zip. Then, log in to the Questions server as an admin. Navigate to the configuration section, select the backup option, and choose to import the updated file. Finally, wait for the process to complete.",
+			"contentSize": "10283",
+			"contentUrl": "Linux CTF - Questions.zip",
+			"encodingFormat": "application/zip",
+			"sha256": ""		
+		}
+	],
+	"keywords": "linux ctf, linux commands ctf, linux exam",
+	"_end": "End://Linux CTF Block"
+  },
+  
+  "cve-2019-14287": {
+	"_begin": "Begin://CVE-2019-14287 Block",
+    "name": "CVE-2019-14287",
+	"disambiguatingDescription": "Escalate Privilege Using CVE-2019-14287 Vulnerability.",
+    "description": [
+		"Escalate Privilege Using CVE-2019-14287 Vulnerability.",
+		"<br/><br/>Start a virtual machine (VM) in VirtualBox, launch the VirtualBox application and select the desired VM from the list on the left. Click the <strong>Start</strong> button to power on the VM. As the VM boots up, the assigned IP address will be displayed on the server screen within the VM. This IP address is essential for network connectivity and can be used to access the VM remotely or to configure network-related settings.",
+		"<br/><br/>SSH to server port 22",
+		"<br/><strong>user:</strong> <em>cve2019</em>",
+		"<br/><strong>password is:</strong> <em>cve2019</em>",
+		"<br/><br/>Escalate Privilege Using CVE-2019-14287 Vulnerability.",
+		"<br/>Find the flag from the file located at /root/flag.txt",
+		"<br/><br/><strong>Command:</strong>",
+		"<br/><em>cat /root/flag.txt</em>"
+	],
+	"description02_name": "Configuration",
+	"description02": [
+		"Open VirtualBox and in the VirtualBox Manager, navigate to the <strong>File</strong> menu at the top left corner and select <strong>Import Appliance....</strong> In the Appliance to Import window, click the folder icon to choose a virtual appliance file to import. Browse to the location of your .ova file, select it, and click <strong>Open</strong>.",
+		"<br/><br/>Review the Appliance Settings window that appears. Here, you can review and change the settings if necessary, such as the name of the virtual machine, CPU count, and memory allocation. Once you are satisfied with the settings, click <strong>Next</strong> and then <strong>Import</strong> to begin the import process. VirtualBox will start importing the .ova file, and this process may take a few minutes depending on the size of the .ova file and your system's performance. Once the import is complete, your virtual machine will be ready to use.",
+		"<br/><br/><strong>Network</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address Assignment:</strong> Automatically assigned (visible upon server startup)"
+	],
+    "Difficulty": "Easy",
+	"datePosted": "2024-08-01",
+	"thumbnail": "cve-2019-14287-450x300.png",
+	"image": "cve-2019-14287-700x600.png",
+	"author": [
+		{
+			"name": "Rashad Aliyev",
+			"email": "rashad@aliev.info",
+			"sameAs": "https://aliev.info/"
+		}
+	],
+	"files": [
+		{
+			"name": "CVE-2019-14287.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "1012668416",
+			"contentUrl": "CVE-2019-14287.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "cve-2019-14287, Security Bypass, Linux local Exploit, sudo 1.8.27",
+	"_end": "End://CVE-2019-14287 Block"
+  },
+  
+  "matrix-breakout-2-morpheus": {
+	"_begin": "Begin://matrix-breakout-2-morpheus Block",
+    "name": "Matrix-Breakout: 2 Morpheus",
+	"disambiguatingDescription": "This is the second in the Matrix-Breakout series, subtitled Morpheus:1",
+    "description": "This is the second in the Matrix-Breakout series, subtitled Morpheus:1. It’s themed as a throwback to the first Matrix movie. You play Trinity, trying to investigate a computer on the Nebuchadnezzar that Cypher has locked everyone else out from, which holds the key to a mystery.",
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+    "Difficulty": "Medium-Hard",
+	"datePosted": "2022-07-11",
+	"thumbnail": "matrix-breakout-2-morpheus-450x300.png",
+	"image": "matrix-breakout-2-morpheus-700x600.png",
+	"author": [
+		{
+			"name": "Jay Beale",
+			"email": "",
+			"sameAs": "https://www.inguardians.com/"
+		}
+	],
+	"files": [
+		{
+			"name": "matrix-breakout-2-morpheus.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/matrix-breakout/matrix-breakout-2-morpheus.ova",
+			"encodingFormat": "application/ovf",
+			"md5": "610A65443B11D2929E848BAA1899CCFB",
+			"sha1": "2E5AF8A2482E83E55B3AE8684EB14C7189680D78",
+			"sha256": ""
+		}
+	],
+	"keywords": "matrix-breakout, morpheus",
+	"_end": "End://matrix-breakout-2-morpheus Block"
+  },
+    
+  "web-machine-n7": {
+	"_begin": "Begin://Web Machine: (N7) Block",
+    "name": "Web Machine: (N7)",
+	"disambiguatingDescription": "Web Machine: (N7)",
+    "description": "",
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+    "Difficulty": "Medium",
+	"datePosted": "2021-11-03",
+	"thumbnail": "web-machine-n7-450x300.png",
+	"image": "",
+	"author": [
+		{
+			"name": "Duty Mastr",
+			"email": "",
+			"sameAs": ""
+		}
+	],
+	"files": [
+		{
+			"name": "Web-Machine-N7.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/webmachine/Web-Machine-N7.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "Web Machine",
+	"_end": "End://Web Machine: (N7) Block"
+  }, 
+  
+  "the-planets-earth": {
+	"_begin": "Begin://The Planets: Earth Block",
+    "name": "The Planets: Earth",
+	"disambiguatingDescription": "Earth is an easy box though you will likely find it more challenging than \"Mercury\" in this series and on the harder side of easy, depending on your experience.",
+    "description": "Earth is an easy box though you will likely find it more challenging than \"Mercury\" in this series and on the harder side of easy, depending on your experience. There are two flags on the box: a user and root flag which include an md5 hash. This has been tested on VirtualBox so may not work correctly on VMware. Any questions/issues or feedback please email me at: SirFlash at protonmail.com, though it may take a while for me to get back to you.",
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+    "Difficulty": "Easy",
+	"datePosted": "2021-11-02",
+	"thumbnail": "the-planets-earth-450x300.png",
+	"image": "",
+	"author": [
+		{
+			"name": "SirFlash",
+			"email": "",
+			"sameAs": ""
+		}
+	],
+	"files": [
+		{
+			"name": "Earth.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/theplanets/Earth.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "The Planets, Earth, Mercury",
+	"_end": "End://The Planets: Earth Block"
+  },
+  
+  "jangow-1-0-1": {
+	"_begin": "Begin://Jangow: 1.0.1 Block",
+    "name": "Jangow: 1.0.1",
+	"disambiguatingDescription": "The secret to this box is enumeration!",
+    "description": "",
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+    "Difficulty": "Easy",
+	"datePosted": "2021-11-04",
+	"thumbnail": "jangow-1-0-1-450x300.png",
+	"image": "jangow-1-0-1-700x600.png",
+	"author": [
+		{
+			"name": "Jangow",
+			"email": "jangow2021@gmail.com",
+			"sameAs": ""
+		}
+	],
+	"files": [
+		{
+			"name": "jangow-01-1.0.1.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/jangow/jangow-01-1.0.1.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "Jangow",
+	"_end": "End://Jangow: 1.0.1 Block"
+  },
+  
+    
+  "red-1": {
+	"_begin": "Begin://Red: 1 Block",
+    "name": "Red: 1",
+	"disambiguatingDescription": "Red has taken over your system, are you able to regain control?",
+    "description": "",
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+	"datePosted": "2021-10-27",
+	"thumbnail": "red-1-450x300.png",
+	"image": "red-1-700x600.png",
+	"author": [
+		{
+			"name": "hadrian3689",
+			"email": "",
+			"sameAs": "https://readysetexploit.wordpress.com/"
+		}
+	],
+	"files": [
+		{
+			"name": "Red.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/red/Red.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "red, red1",
+	"_end": "End://Red: 1 Block"
+  },
+  
+  "napping-1-0-1": {
+	"_begin": "Begin://NAPPING: 1.0.1 Block",
+    "name": "NAPPING: 1.0.1",
+	"disambiguatingDescription": "Even Admins can fall asleep on the job",
+    "description": "",
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+	"datePosted": "2021-10-22",
+	"thumbnail": "napping-1-0-1-450x300.png",
+	"image": "",
+	"author": [
+		{
+			"name": "hadrian3689",
+			"email": "",
+			"sameAs": "https://readysetexploit.wordpress.com/"
+		}
+	],
+	"files": [
+		{
+			"name": "napping-1.0.1.ova",
+			"description": "Open Virtual Appliance (OVA) package.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/napping/napping-1.0.1.ova",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "Napping",
+	"_end": "End://NAPPING: 1.0.1 Block"
+  },
+    
+  "empire-lupinone": {
+	"_begin": "Begin://Empire: LupinOne Block",
+    "name": "Empire: LupinOne",
+	"disambiguatingDescription": "This box was created to be medium, but it can be hard if you get lost.",
+    "description": [
+		"This box was created to be medium, but it can be hard if you get lost.",
+		"<br/><br/>CTF like box. You have to enumerate as much as you can.",
+		"<br/><br/>For hints discord Server ( https://discord.gg/7asvAhCEhe )"
+	],
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+    "Difficulty": "Medium",
+	"datePosted": "2021-10-21",
+	"thumbnail": "empire-lupinone-450x300.png",
+	"image": "empire-lupinone-700x600.png",
+	"author": [
+		{
+			"name": "icex64 & Empire Cybersecurity",
+			"email": "",
+			"sameAs": ""
+		}
+	],
+	"files": [
+		{
+			"name": "01-Empire-Lupin-One.zip",
+			"description": "Open Virtual Appliance (OVA) package included.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/empire/01-Empire-Lupin-One.zip",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "Empire, LupinOne",
+	"_end": "End://Empire: LupinOne Block"
+  },
+  
+  "empire-breakout": {
+	"_begin": "Begin://Empire: Breakout Block",
+    "name": "Empire: Breakout",
+	"disambiguatingDescription": "This box was created to be an Easy box, but it can be Medium if you get lost.",
+    "description": [
+		"This box was created to be an Easy box, but it can be Medium if you get lost.",
+		"<br/>For hints discord Server ( https://discord.gg/7asvAhCEhe )"
+	],
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+    "Difficulty": "Easy",
+	"datePosted": "2021-10-21",
+	"thumbnail": "empire-breakout-450x300.png",
+	"image": "empire-breakout-700x600.png",
+	"author": [
+		{
+			"name": "icex64 & Empire Cybersecurity",
+			"email": "",
+			"sameAs": ""
+		}
+	],
+	"files": [
+		{
+			"name": "02-Breakout.zip",
+			"description": "Open Virtual Appliance (OVA) package included.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/empire/02-Breakout.zip",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "Empire, Breakout",
+	"_end": "End://Empire: Breakout Block"
+  },
+  
+  "thales-1": {
+	"_begin": "Begin://Thales: 1 Block",
+    "name": "Thales: 1",
+	"disambiguatingDescription": "Open your eyes and change your perspective",
+    "description": [
+		"Open your eyes and change your perspective",
+		"<br/><br/>includes 2 flags:user.txt and root.txt.",
+		"<br/><br/>Telegram: @machineboy141 (for any hint)",
+		"<br/><br/>This works better with VIrtualBox rathe than VMware"
+	],
+	"description02_name": "Information",
+	"description02": [
+		"<strong>Virtual Machine</strong>",
+		"<br/><strong>Format:</strong> Virtual Machine (Virtualbox - OVA)",
+		"<br/><strong>Operating System:</strong> Linux",
+		"<br/><br/><strong>Networking</strong>",
+		"<br/><strong>DHCP:</strong> Enabled",
+		"<br/><strong>IP Address:</strong> Automatically assign"
+	],
+	"datePosted": "2021-10-16",
+	"thumbnail": "thales-1-450x300.png",
+	"image": "thales-1-700x600.png",
+	"author": [
+		{
+			"name": "MachineBoy",
+			"email": "",
+			"sameAs": "https://kernelblog.org/"
+		}
+	],
+	"files": [
+		{
+			"name": "Thales.zip",
+			"description": "Open Virtual Appliance (OVA) package included.",
+			"contentSize": "",
+			"contentUrl": "https://download.vulnhub.com/thales/Thales.zip",
+			"encodingFormat": "application/ovf",
+			"sha256": ""		
+		}
+	],
+	"keywords": "Thales",
+	"_end": "End://Thales: 1 Block"
+  }
+  
+}
